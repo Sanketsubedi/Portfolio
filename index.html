@@ -12,15 +12,15 @@
 
 <body class="p-0 m-0">
     <main class="bg-[#14131A] w-full h-[140vh] md:h-[100vh]">
-        <aside class="hidden lg:flex h-screen fixed w-screen sm:w-[300px] z-30">
+        <aside class="hidden lg:flex h-screen fixed w-screen sm:w-[300px] z-30" id="toggle-class">
             <div class="toggle flex flex-col lg:m-5 w-full">
                 <div class="hidden lg:flex gap-2 p-5 pt-0">
                     <div class="h-4 w-4 bg-[#2BD576] rounded-full"></div>
                     <div class="h-4 w-4 bg-red-500 rounded-full"></div>
                 </div>
                 <div
-                    class="flex mt-4 relative flex-col h-full p-5 bg-cardPrimary text-[#8B8A91] rounded-lg w-full overflow-y-auto pb-20 md:pb-5">
-                    <div class="block lg:hidden p-5 z-10 text-primary absolute right-0 top-0 cursor-pointer text-2xl">
+                    class="flex mt-4 relative flex-col h-full p-5 text-[#8B8A91] rounded-lg w-full overflow-y-auto pb-20 md:pb-5">
+                    <div class="block lg:hidden p-5 z-10 text-primary absolute right-0 top-0 cursor-pointer text-2xl" id="close" >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="#8B8A91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="text-primary">
@@ -37,7 +37,7 @@
                         </svg>
                         Home</a><a
                         class="flex bg-transparent items-center placeholder:text-info transform transition-transform duration-300 hover:-translate-y-1 text-sm gap-4 p-4"
-                        href="/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        href="trends.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="#8B8A91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-flame">
                             <path
@@ -46,7 +46,7 @@
                         </svg>
                         Trending</a><a
                         class="flex bg-transparent items-center placeholder:text-info transform transition-transform duration-300 hover:-translate-y-1 text-sm gap-4 p-4"
-                        href="/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        href="trends.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="#8B8A91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-code">
                             <polyline points="16 18 22 12 16 6"></polyline>
@@ -54,7 +54,7 @@
                         </svg>
                         Snippets</a><a
                         class="flex bg-transparent items-center placeholder:text-info transform transition-transform duration-300 hover:-translate-y-1 text-sm gap-4 p-4"
-                        href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        href="trends.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" viewBox="0 0 24 24" fill="none" stroke="#8B8A91" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video">
                             <path d="m22 8-6 4 6 4V8Z"></path>
@@ -70,7 +70,7 @@
                         <div class="flex">
                             <a target="_blank"
                             class="flex bg-transparent items-center placeholder:text-info transform transition-transform duration-300 hover:-translate-y-1 text-sm gap-4 p-4"
-                            href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                            href="https://www.instagram.com/itsmesanketsubedi/"><svg xmlns="http://www.w3.org/2000/svg" width="20"
                                 height="20" viewBox="0 0 24 24" fill="none" stroke="#b5179e" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" >
                                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
@@ -79,7 +79,7 @@
                             </svg>
                             </a><a target="_blank"
                             class="flex bg-transparent items-center placeholder:text-info transform transition-transform duration-300 hover:-translate-y-1 text-sm gap-4 p-4"
-                            href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                            href="https://github.com/Sanketsubedi"><svg xmlns="http://www.w3.org/2000/svg" width="20"
                                 height="20" viewBox="0 0 24 24" fill="none" stroke="#2a9d8f" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" >
                                 <path
@@ -89,7 +89,7 @@
                             </svg>
                             </a><a target="_blank"
                             class="flex bg-transparent items-center placeholder:text-info transform transition-transform duration-300 hover:-translate-y-1 text-sm gap-4 p-4"
-                            href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                            href="https://www.linkedin.com/in/itsmesanket/"><svg xmlns="http://www.w3.org/2000/svg" width="20"
                                 height="20" viewBox="0 0 24 24" fill="none" stroke="#0277b5" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
@@ -98,7 +98,8 @@
                                 <circle cx="4" cy="4" r="2"></circle>
                             </svg>
                             </a>
-                        </div><button type="button">
+                        </div>
+                        <button type="button" id="toggle" onclick="clickfn()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="#8B8A91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="flex lg:hidden cursor-pointer hover:text-primary transition-colors">
@@ -122,7 +123,7 @@
                                 <div class="text-3xl flex flex-col font-bold text-[#14131A]">Sanket Subedi<div
                                         class="text-sm font-thin flex justify-between items-center">@itsmesanketsubedi<a
                                             class="block md:hidden" target="_blank"
-                                            href="#"><button
+                                            href="https://www.instagram.com/itsmesanketsubedi/"><button
                                                 class="h-max w-max flex gap-2 justify-center items-center rounded-md outline-0 active:scale-95 active:shadow-inner disabled:opacity-50 disabled:pointer-events-none disbaled:cursor-not-allowed bg-[#14131A] text-[#8B8A91] font-semibold text-xs p-2"><svg
                                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -133,7 +134,7 @@
                                                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
                                                 </svg></button></a></div>
                                 </div>
-                                <a class="hidden md:block" target="_blank" href="#"><button
+                                <a class="hidden md:block" target="_blank" href="https://www.instagram.com/itsmesanketsubedi/"><button
                                         class="h-max w-max flex gap-2 justify-center items-center rounded-md outline-0 active:scale-95 active:shadow-inner disabled:opacity-50 disabled:pointer-events-none disbaled:cursor-not-allowed bg-[#14131A] text-[#8B8A91] font-semibold text-xs py-2 px-4"><svg
                                             xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -177,5 +178,25 @@
         </div>
     </main>
 </body>
-
+<script>
+ document.getElementById('toggle').onclick = function(){
+    clickfn()
+};
+function clickfn(){
+    console.log('clicked');
+    document.getElementById("toggle-class").classList.add('block')
+    document.getElementById("toggle-class").classList.add('bg-black')
+    document.getElementById("toggle-class").classList.add('bg-opacity-90')
+    document.getElementById("toggle-class").classList.remove('hidden')
+}
+document.getElementById('close').onclick = function(){
+    close()
+};
+function close(){
+    document.getElementById("toggle-class").classList.remove('block')
+    document.getElementById("toggle-class").classList.remove('bg-black')
+    document.getElementById("toggle-class").classList.remove('bg-opacity-90')
+    document.getElementById("toggle-class").classList.add('hidden')
+}
+</script>
 </html>
